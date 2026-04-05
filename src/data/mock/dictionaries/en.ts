@@ -1,4 +1,71 @@
-const en = {
+export interface Dictionary {
+  nav: {
+    home: string;
+    catalog: string;
+    login: string;
+    subscribe: string;
+  };
+  hero: {
+    headline: string;
+    subtext: string;
+    cta: string;
+  };
+  features: {
+    title: string;
+    items: { title: string; description: string }[];
+  };
+  carousel: {
+    title: string;
+    lessons: string;
+  };
+  footer: {
+    brand: string;
+    tagline: string;
+    quickLinks: string;
+    contact: string;
+    instructor: string;
+    supportEmail: string;
+    rights: string;
+  };
+  catalog: {
+    title: string;
+    pricing: string;
+    allCategories: string;
+    allDifficulties: string;
+    categories: {
+      "web-dev": string;
+      "data-science": string;
+      design: string;
+    };
+    difficulties: {
+      beginner: string;
+      intermediate: string;
+      advanced: string;
+    };
+    mostPopular: string;
+    noCourses: string;
+  };
+  player: {
+    modules: string;
+    progress: string;
+    overview: string;
+    transcript: string;
+    instructor: string;
+    whatYouLearn: string;
+    collapseMenu: string;
+    expandMenu: string;
+    speed: string;
+  };
+  theme: {
+    light: string;
+    dark: string;
+  };
+  locale: {
+    switchTo: string;
+  };
+}
+
+const en: Dictionary = {
   nav: {
     home: "Home",
     catalog: "Catalog",
@@ -65,9 +132,8 @@ const en = {
     dark: "Dark mode",
   },
   locale: {
-    switchTo: "\u0627\u0644\u0639\u0631\u0628\u064A\u0629",
+    switchTo: "العربية",
   },
-} as const;
+};
 
-export type Dictionary = typeof en;
 export default en;
